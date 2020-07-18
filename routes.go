@@ -9,6 +9,6 @@ import (
 
 func MainRouter() http.Handler {
 	r := chi.NewRouter()
-	r.Mount("/v1", v1.V1Router())
+	r.Mount("/v1", v1.Router())
 	return r
 }

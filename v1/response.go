@@ -6,6 +6,7 @@ import (
 	"net/http"
 )
 
+// Response ...
 type Response struct {
 	Success bool        `json:"success"`
 	Message string      `json:"message"`
@@ -13,7 +14,8 @@ type Response struct {
 	Error   []string    `json:"error,omitempty"`
 }
 
-func JsonResponse(w http.ResponseWriter, payload Response, statusCode int) {
+// JSONResponse ...
+func JSONResponse(w http.ResponseWriter, payload Response, statusCode int) {
 	response, _ := json.Marshal(payload)
 	fmt.Println(payload)
 	w.Header().Set("Content-Type", "application/json")
