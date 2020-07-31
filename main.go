@@ -42,7 +42,7 @@ func main() {
 	}()
 
 	sig := <-signalChan
-	fmt.Printf("Received signal: %q, shutting down...", sig.String())
+	fmt.Printf("Received signal: %q, shutting down...\n", sig.String())
 	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
 	defer cancel() // Avoid context leak
 
