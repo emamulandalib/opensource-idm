@@ -19,7 +19,7 @@ func main() {
 
 	r := chi.NewRouter()
 	r.Use(middleware.Logger)
-	r.Mount("/api", MainRouter())
+	r.Mount("/api", Router())
 
 	port := 8888
 	addr := fmt.Sprintf(":%d", port)

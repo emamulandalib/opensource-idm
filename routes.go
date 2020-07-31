@@ -7,7 +7,8 @@ import (
 	"github.com/go-chi/chi"
 )
 
-func MainRouter() http.Handler {
+// Router ...
+func Router() http.Handler {
 	r := chi.NewRouter()
 	r.Mount("/v1", v1.Router())
 	return r

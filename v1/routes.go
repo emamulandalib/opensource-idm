@@ -10,5 +10,6 @@ import (
 func Router() http.Handler {
 	r := chi.NewRouter()
 	r.Get("/", Index)
+	r.Post("/download-file", DownloadFile)
 	return r
 }
